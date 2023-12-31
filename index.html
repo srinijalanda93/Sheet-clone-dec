@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="https://pbs.twimg.com/profile_images/1129474049199882240/RZPZ1KYT_400x400.png" type="image/x-icon">
+  <link rel="stylesheet" href="menu.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body>
+   
+  <main style="position:relative;
+    width:100vw;
+     height:100vh;
+     overflow:scroll;
+    ">
+  
+    <div id="options">
+      <div class="greenbar">
+        <div class="pink">File</div>
+        <div class="pooja-home">Home</div>
+        <div class="pink">Insert</div>
+        <div class="pink">View</div>
+        <div class="pink">Page Layout</div>
+        <div class="pink">Help</div>
+       </div>
+
+      <div id="menus">
+        <i class="fa-regular fa-copy" style="color: #000000;"></i>
+        <i class="fa-solid fa-scissors" style="color: #000000;"></i>
+        <i class="fa-solid fa-paste" style="color: #000000;"></i>
+        <select name="fontfamily" id="font-family-dropdown" onchange="onChangeFontFamily(this)">
+          <option value="Courier New, monospace">Courier New</option>
+          <option value="Lucida Handwriting, cursive">Lucida Handwriting</option>
+          <option value="Algerian, cursive">Algerian</option>
+        </select>
+
+        <input type="number" value="16" id="font-size-input" placeholder="16" oninput="onChangeFontSize(this)">
+
+        <div id="bold" onclick="onclickbold(this)">B</div>
+        <div id="italic" onclick="onclickitalic(this)">I</div>
+        <div id="underline" onclick="onclickunderline(this)">U</div>
+        <div class="active-option data-value" onclick="onclicktextalign(this)" data-value="start"> <i
+            class="fa-solid fa-align-left" style="color: #000000;"></i></div>
+        <div class="data-value" onclick="onclicktextalign(this)" data-value="right"><i class="fa-solid fa-align-right"
+            style="color: #000000;"></i></div>
+        <div class="data-value" onclick="onclicktextalign(this)" data-value="center"><i class="fa-solid fa-align-center"
+            style="color: #000000;"></i></div>
+
+        <div id="text-color">
+          <label for="color-picker"><span class="material-icons"> border_color </span></label>
+          <input onchange="onChangeTextColor(this)" type="color" id="color-picker" style="width: 1; height: 2" />
+        </div>
+
+        <div id="bg-color">
+          <label for="bgcolor-picker"><span class="material-icons"> format_color_fill </span></label>
+          <input onchange="onChangeBackgroundColor(this)" type="color" id="bgcolor-picker" style="width: 1; height: 2"
+            color="white" />
+        </div>
+      </div>
+      <div class="bottom-section">
+        <span id="active-cell">null</span>
+        <input id="expression-input" type="text" class="expression" placeholder="f(x )">
+      </div>
+    </div>
+
+
+
+
+    <div id="header">
+      <b style="position:sticky;left:0;top: 0; background-color:white"> S.no</b>
+    </div>
+
+    <section id="body">
+    </section>
+      <div id="sheet-tabs">
+      <button id="create-new-sheet-button" onclick="createNewSheet()">Create New Sheet</button>
+   
+      <div class="tab active-tab">Sheet1</div>
+    </div>
+    <div id="sheet-content">
+      <!-- Your spreadsheet content goes here -->
+    </div>
+  </main>
+  <script src="option.js"></script>
+  <script src="script.js"></script>
+  <script src="newsheet.js"></script>
+</body>
+
+</html>

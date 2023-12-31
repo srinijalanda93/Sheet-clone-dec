@@ -1,0 +1,42 @@
+#menus
+{
+    display:flex;
+    justify-content:flex-start;
+    gap:20px;
+    align-items:center;
+}
+
+.active-option
+{
+    
+    background-color: #d0d8e0;
+}
+
+#menus>div
+{
+padding:10px;
+cursor:pointer;
+
+border-radius:4px;
+
+
+}
+
+#menus>div:hover
+{
+    background-color: #d0d8e0aa;
+}
+
+
+.bottom-section
+{
+    display:flex;
+    gap:20px;
+    margin:20px 0;
+    align-items: center; 
+}
+
+.bottom-section>input{
+    flex-grow:1;
+    padding:10px;
+}

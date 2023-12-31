@@ -1,0 +1,115 @@
+#header {
+    display: flex;
+    position: sticky;
+    top: 0;
+}
+
+#header>b,
+#d {
+    min-width: 100px;
+    border: 1px solid #dfe4e9;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+}
+
+.row>b,
+.row>div {
+    min-width: 100px;
+    border: 1px solid #dfe4e9;
+    padding: 10px 0;
+}
+
+.row>b:first-child {
+    position:sticky;
+    left:0;
+    text-align: center;
+}
+
+#font-size-input
+{
+width:40px;
+}
+
+#header
+{
+    z-index:100;
+}
+#body
+{
+    width:fit-content;
+}
+#options {
+    position:sticky;
+    top:0;
+    left:0;
+    z-index:1000000000;
+    padding: 10px;
+    background-color: #ecf0f1;
+}
+
+#active-cell {
+background-color: white !important;
+    padding: 2px 20px;
+}
+
+
+.cell
+{
+    font-size: 16px;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+#sheet-tabs
+{
+    position:sticky;
+bottom:0;
+background-color:white;
+padding:10px;
+left:0;
+display:flex;
+}
+
+.tab
+{
+    height:15px;
+    width:50px;
+    padding:5px;
+    border:3px solid gray;
+    margin-inline:10px;
+}
+
+.pooja-home
+{
+    color:black;
+    
+    margin-top:10px;
+background-color:white;
+    padding-inline:20px;
+}
+body
+{
+    margin:0px;
+    padding:0px;
+}
+
+.greenbar
+{
+    margin-left:-10px;
+    margin-top:-10px;
+    height:35px;
+width:100vw;
+    display:flex;
+    background-color:#287444;
+}
+
+.pink{
+    margin-top:10px;
+    color:white;
+    padding-inline:20px;
+}
